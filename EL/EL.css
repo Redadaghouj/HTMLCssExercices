@@ -1,0 +1,151 @@
+:root {
+  --mainColor: #000;
+  --squareColor: #fea604;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.main {
+  width: 700px;
+  height: 550px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: repeat(9, auto);
+  position: relative;
+}
+.Eone {
+  grid-area: 1 / 1 / 8 / 2;
+}
+.Etwo {
+  grid-area: 1 / 2 / 2 / 5;
+}
+.Ethree {
+  grid-area: 4 / 2 / 5 / 5;
+}
+.Efour {
+  grid-area: 7 / 2 / 8 / 5;
+}
+.Lone {
+  grid-area: 1 / 6 / 8 / 7;
+}
+.Ltwo {
+  grid-area: 7 / 7 / 8 / 10;
+}
+.Eone,
+.Etwo,
+.Ethree,
+.Efour,
+.Lone,
+.Ltwo {
+  background-color: var(--mainColor);
+}
+.Esquare {
+  width: 50px;
+  height: 50px;
+  background-color: var(--squareColor);
+  position: absolute;
+  left: 35.5%;
+  top: 2.5%;
+  animation-name: EsquareA;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 2.5s;
+}
+.Lsquare {
+  width: 50px;
+  height: 50px;
+  background-color: var(--squareColor);
+  position: absolute;
+  left: 91%;
+  top: 88.4%;
+  animation-name: LsquareA;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+@keyframes LsquareA {
+  0% {
+    left: 91%;
+    top: 88.4%;
+    opacity: 0;
+  }
+  10% {
+    left: 91%;
+    top: 88.4%;
+    opacity: 1;
+  }
+  30% {
+    left: 57.6%;
+    top: 88.4%;
+    opacity: 1;
+  }
+  50% {
+    left: 57.6%;
+    top: 50%;
+    opacity: 1;
+  }
+  70% {
+    left: 57.6%;
+    top: 30%;
+    opacity: 1;
+  }
+  90% {
+    left: 57.6%;
+    top: 5.5%;
+    opacity: 1;
+  }
+  100% {
+    left: 57.6%;
+    top: 2.5%;
+    opacity: 0;
+  }
+}
+
+@keyframes EsquareA {
+  0% {
+    left: 35.5%;
+    top: 2.5%;
+  }
+  10% {
+    left: 2%;
+    top: 2.5%;
+  }
+  20% {
+    left: 2%;
+    top: 45.5%;
+  }
+  30% {
+    left: 35.5%;
+    top: 45.5%;
+  }
+  40% {
+    left: 2%;
+    top: 45.5%;
+  }
+  50% {
+    left: 2%;
+    top: 88.2%;
+  }
+  60% {
+    left: 35.5%;
+    top: 88.2%;
+  }
+  70% {
+    left: 2%;
+    top: 88.2%;
+  }
+  80% {
+    left: 2%;
+    top: 45.5%;
+  }
+  90% {
+    left: 2%;
+    top: 2.5%;
+  }
+  100% {
+    left: 35.5%;
+    top: 2.5%;
+  }
+}
